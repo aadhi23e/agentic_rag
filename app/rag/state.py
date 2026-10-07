@@ -3,12 +3,12 @@ from typing_extensions import TypedDict
 from pydantic import BaseModel, Field
 from langchain_core.documents import Document
 
-class Routedecision(BaseModel):
+class RouteDecision(BaseModel):
     route: Literal["kb", "direct"] = Field(
         description="User Kb for questions needing Agentic RAG docs; direct for greetings/simple chat."
     )
 
-class EvidanceGrade(BaseModel):
+class EvidenceGrade(BaseModel):
     grade: Literal["good", "weak"] = Field(
         description="good means evidance can answer the question; weak means not enough evidence."
     )

@@ -25,15 +25,15 @@ def llm():
                 temperature=0,
                 api_key=settings.openai_api_key,
             )
-            return _llm
         elif settings.groq_api_key:
             _llm = ChatGroq(
-                model=settings.openai_model,
+                model=settings.groq_model,
                 temperature=0,
                 api_key=settings.groq_api_key,
             )
         else:
             raise RuntimeError("OPENAI_API_KEY and GROQ_API_KEY are missing atleast one is required")
+    return _llm
 
 def web_search_tool():
     global _web_search

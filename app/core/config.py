@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     pinecone_namespace: str = "company-hr-kb"
 
     openai_model: str = "gpt-4o-mini"
+    groq_model: str = "openai/gpt-oss-120b"
     embedding_model: str = "text-embedding-3-small"
     # fallback_embedding_model: str = "gemini-embedding-2"
 
